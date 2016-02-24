@@ -24,6 +24,8 @@ UIKIT_EXTERN const CGFloat kShowHeaderSize;
 
 // 线宽
 @property (nonatomic) CGFloat mLineWihdth;
+// 拖动进度
+@property (nonatomic) CGFloat mProgress;
 // 隐藏停止动画
 @property (nonatomic) BOOL mHidesWhenStop;
 // 动画类型
@@ -34,8 +36,6 @@ UIKIT_EXTERN const CGFloat kShowHeaderSize;
 @property (nonatomic, readonly) BOOL mIsTracking;
 // 控件显示中
 @property (nonatomic, readonly) BOOL mIsShowing;
-// 拖动进度
-@property (nonatomic) CGFloat mProgress;
 // 显示动画
 - (void)showAnimation;
 // 结束动画
