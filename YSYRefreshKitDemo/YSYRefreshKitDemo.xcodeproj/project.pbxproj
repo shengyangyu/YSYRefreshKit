@@ -13,6 +13,8 @@
 		D3ADC6C71C7C625100F43838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6C51C7C625100F43838 /* Main.storyboard */; };
 		D3ADC6C91C7C625100F43838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6C81C7C625100F43838 /* Assets.xcassets */; };
 		D3ADC6CC1C7C625100F43838 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6CA1C7C625100F43838 /* LaunchScreen.storyboard */; };
+		D3C3F9DD1C7D55D6003AE303 /* UIView+YSYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */; };
+		D3C3F9DE1C7D55D6003AE303 /* YSYRefreshKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D3ADC6C81C7C625100F43838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3ADC6CB1C7C625100F43838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3ADC6CD1C7C625100F43838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C3F9D91C7D55D6003AE303 /* UIView+YSYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSYCategory.h"; sourceTree = "<group>"; };
+		D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSYCategory.m"; sourceTree = "<group>"; };
+		D3C3F9DB1C7D55D6003AE303 /* YSYRefreshKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSYRefreshKit.h; sourceTree = "<group>"; };
+		D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSYRefreshKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 		D3ADC6B01C7C625100F43838 = {
 			isa = PBXGroup;
 			children = (
+				D3C3F9D81C7D55D6003AE303 /* YSYRefreshKit */,
 				D3ADC6BB1C7C625100F43838 /* YSYRefreshKitDemo */,
 				D3ADC6BA1C7C625100F43838 /* Products */,
 			);
@@ -77,6 +84,17 @@
 				D3ADC6BD1C7C625100F43838 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3C3F9D81C7D55D6003AE303 /* YSYRefreshKit */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3F9D91C7D55D6003AE303 /* UIView+YSYCategory.h */,
+				D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */,
+				D3C3F9DB1C7D55D6003AE303 /* YSYRefreshKit.h */,
+				D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */,
+			);
+			path = YSYRefreshKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +169,8 @@
 			files = (
 				D3ADC6C41C7C625100F43838 /* ViewController.m in Sources */,
 				D3ADC6C11C7C625100F43838 /* AppDelegate.m in Sources */,
+				D3C3F9DD1C7D55D6003AE303 /* UIView+YSYCategory.m in Sources */,
+				D3C3F9DE1C7D55D6003AE303 /* YSYRefreshKit.m in Sources */,
 				D3ADC6BE1C7C625100F43838 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +318,7 @@
 				D3ADC6D21C7C625100F43838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

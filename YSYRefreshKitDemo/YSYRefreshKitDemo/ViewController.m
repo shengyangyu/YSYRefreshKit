@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "YSYRefreshKit.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *mTable;
+@property (strong, nonatomic) YSYRefreshKit *mShowHead;
 
 @end
 
@@ -17,7 +21,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.mTable.rowHeight = 64.0f;
+//    self.mTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.mTable.scrollEnabled = NO;
+    [self.mTable registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // refresh head
+    self.mShowHead = [[YSYRefreshKit alloc] initWithSuperView:self.view withScrollView:self.mTable];
+    __weak __typeof(self)weakSelf = self;
+    self.mShowHead.startBlock = ^() {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [strongSelf.mShowHead endRefresh];
+        });
+    };
+}
+
+#pragma mark - UITableView Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 100;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"textLabel:%@",@(indexPath.row)];
+}
+
+#pragma mark -scroll
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.mTable) {
+        CGFloat offsetY = scrollView.contentOffset.y;
+        if (offsetY > 0) {
+            if (self.mShowHead.mShowView.alpha > 0) {
+                scrollView.contentOffset = CGPointMake(0, 0);
+            }
+        } else {
+            scrollView.contentOffset = CGPointMake(0, 0);
+        }
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
