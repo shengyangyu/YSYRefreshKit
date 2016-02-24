@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0A312B021359B9D3BBD6BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F8CF955D200D862818CC8B /* libPods.a */; };
 		D3ADC6BE1C7C625100F43838 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADC6BD1C7C625100F43838 /* main.m */; };
 		D3ADC6C11C7C625100F43838 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADC6C01C7C625100F43838 /* AppDelegate.m */; };
 		D3ADC6C41C7C625100F43838 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADC6C31C7C625100F43838 /* ViewController.m */; };
 		D3ADC6C71C7C625100F43838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6C51C7C625100F43838 /* Main.storyboard */; };
 		D3ADC6C91C7C625100F43838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6C81C7C625100F43838 /* Assets.xcassets */; };
 		D3ADC6CC1C7C625100F43838 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADC6CA1C7C625100F43838 /* LaunchScreen.storyboard */; };
-		D3C3F9DD1C7D55D6003AE303 /* UIView+YSYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */; };
-		D3C3F9DE1C7D55D6003AE303 /* YSYRefreshKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C29EE5EC88CC920845180DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		91CB35E04D66C621F812C7BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B4F8CF955D200D862818CC8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ADC6B91C7C625100F43838 /* YSYRefreshKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSYRefreshKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ADC6BD1C7C625100F43838 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3ADC6BF1C7C625100F43838 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,10 +30,6 @@
 		D3ADC6C81C7C625100F43838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3ADC6CB1C7C625100F43838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3ADC6CD1C7C625100F43838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3C3F9D91C7D55D6003AE303 /* UIView+YSYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSYCategory.h"; sourceTree = "<group>"; };
-		D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSYCategory.m"; sourceTree = "<group>"; };
-		D3C3F9DB1C7D55D6003AE303 /* YSYRefreshKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSYRefreshKit.h; sourceTree = "<group>"; };
-		D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSYRefreshKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0A312B021359B9D3BBD6BC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C21D76CD5FBA19A280CD0F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4F8CF955D200D862818CC8B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		432279EAF1951BFF320C0416 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C29EE5EC88CC920845180DA /* Pods.debug.xcconfig */,
+				91CB35E04D66C621F812C7BA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3ADC6B01C7C625100F43838 = {
 			isa = PBXGroup;
 			children = (
-				D3C3F9D81C7D55D6003AE303 /* YSYRefreshKit */,
 				D3ADC6BB1C7C625100F43838 /* YSYRefreshKitDemo */,
 				D3ADC6BA1C7C625100F43838 /* Products */,
+				432279EAF1951BFF320C0416 /* Pods */,
+				0C21D76CD5FBA19A280CD0F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,17 +103,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D3C3F9D81C7D55D6003AE303 /* YSYRefreshKit */ = {
-			isa = PBXGroup;
-			children = (
-				D3C3F9D91C7D55D6003AE303 /* UIView+YSYCategory.h */,
-				D3C3F9DA1C7D55D6003AE303 /* UIView+YSYCategory.m */,
-				D3C3F9DB1C7D55D6003AE303 /* YSYRefreshKit.h */,
-				D3C3F9DC1C7D55D6003AE303 /* YSYRefreshKit.m */,
-			);
-			path = YSYRefreshKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3ADC6D01C7C625100F43838 /* Build configuration list for PBXNativeTarget "YSYRefreshKitDemo" */;
 			buildPhases = (
+				0074B8FEB197AF4F3B6175FD /* Check Pods Manifest.lock */,
 				D3ADC6B51C7C625100F43838 /* Sources */,
 				D3ADC6B61C7C625100F43838 /* Frameworks */,
 				D3ADC6B71C7C625100F43838 /* Resources */,
+				362605F76BB64EA6855A0F6E /* Embed Pods Frameworks */,
+				2F61582BF0602006846A75DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +171,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0074B8FEB197AF4F3B6175FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F61582BF0602006846A75DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		362605F76BB64EA6855A0F6E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3ADC6B51C7C625100F43838 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,8 +226,6 @@
 			files = (
 				D3ADC6C41C7C625100F43838 /* ViewController.m in Sources */,
 				D3ADC6C11C7C625100F43838 /* AppDelegate.m in Sources */,
-				D3C3F9DD1C7D55D6003AE303 /* UIView+YSYCategory.m in Sources */,
-				D3C3F9DE1C7D55D6003AE303 /* YSYRefreshKit.m in Sources */,
 				D3ADC6BE1C7C625100F43838 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +334,7 @@
 		};
 		D3ADC6D11C7C625100F43838 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C29EE5EC88CC920845180DA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YSYRefreshKitDemo/Info.plist;
@@ -290,6 +346,7 @@
 		};
 		D3ADC6D21C7C625100F43838 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CB35E04D66C621F812C7BA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YSYRefreshKitDemo/Info.plist;
