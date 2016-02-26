@@ -48,6 +48,8 @@ UIKIT_EXTERN const CGFloat kShowHeaderSize;
  */
 @interface YSYRefreshKit : NSObject
 
+// 默认状态栏高度
+@property (nonatomic) CGFloat mStatusHeight;
 // 定义回调
 typedef void(^YSYStartBlock)();
 typedef BOOL(^YSYEndBlock)();

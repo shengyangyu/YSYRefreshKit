@@ -262,8 +262,6 @@ const CGFloat kShowLayerSize = (kShowHeaderSize*0.5);
 @property (nonatomic, assign) CGFloat mOriginOffset;
 // 拖动手势
 @property (nonatomic, strong) UIPanGestureRecognizer *mPan;
-// 默认状态栏高度
-@property (nonatomic, assign) CGFloat mStatusHeight;
 
 @end
 
@@ -441,6 +439,13 @@ static CGFloat kRKTime = 0.35;
             // 表示可以不可以出现刷新view
             self.mIsScrollToTop = NO;
             self.mDragOffset = 0;
+        }
+        if (offSetY > 0) {
+            if (self.mShowView.alpha > 0) {
+                scrollView.contentOffset = CGPointMake(0, -self.mStatusHeight);
+            }
+        } else {
+            scrollView.contentOffset = CGPointMake(0, -self.mStatusHeight);
         }
     }
 }

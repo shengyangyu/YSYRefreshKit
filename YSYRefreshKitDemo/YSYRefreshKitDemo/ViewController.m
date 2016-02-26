@@ -31,6 +31,7 @@
     [super viewDidAppear:animated];
     // refresh head
     self.mShowHead = [[YSYRefreshKit alloc] initWithSuperView:self.view withScrollView:self.mTable];
+    self.mShowHead.mStatusHeight = -20;
     __weak __typeof(self)weakSelf = self;
     self.mShowHead.startBlock = ^() {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
@@ -55,20 +56,6 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     cell.textLabel.text = [NSString stringWithFormat:@"textLabel:%@",@(indexPath.row)];
-}
-
-#pragma mark -scroll
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView == self.mTable) {
-        CGFloat offsetY = scrollView.contentOffset.y;
-        if (offsetY > 0) {
-            if (self.mShowHead.mShowView.alpha > 0) {
-                scrollView.contentOffset = CGPointMake(0, 0);
-            }
-        } else {
-            scrollView.contentOffset = CGPointMake(0, 0);
-        }
-    }
 }
 
 
